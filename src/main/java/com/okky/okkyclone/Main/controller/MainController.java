@@ -19,7 +19,7 @@ public class MainController {
     @GetMapping
     public ResponseEntity<Void> getMain(@Positive @RequestParam int page,
                                         @Positive @RequestParam int size){
-
+        //메인 테스트
 
     }
 }

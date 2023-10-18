@@ -28,6 +28,10 @@ public class BoardController {
         this.boardService = boardService;
     }
 
+    //회원 상세
+//    @GetMapping("/{question-id}")
+//    public ResponseEntity<>
+
     @PostMapping("/new")
     public ResponseEntity<Void> registerBoard(@RequestBody @Valid BoardNewDto boardNewDto){
         Board newBoard = boardMapper.boardNewDtoToBoard(boardNewDto);

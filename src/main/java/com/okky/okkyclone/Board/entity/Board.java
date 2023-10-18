@@ -33,6 +33,14 @@ public class Board extends BaseEntity {
     @Column(nullable = false)
     private String content;
 
+    //조회수
+    @Column(columnDefinition = "integer default 0", nullable = false)
+    private int viewCount;
+
+    //댓글 개수
+    @Column(columnDefinition = "integer default 0", nullable = false)
+    private int commentCount;
+
     @OneToMany(mappedBy = "board", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Review> reviews = new ArrayList<>();
 
